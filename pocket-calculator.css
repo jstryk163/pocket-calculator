@@ -1,0 +1,14 @@
+html{
+  background-color: blue;
+}
+
+button {
+  align-items: center;
+  align-content: center;
+  color: black;
+}
+p{
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
