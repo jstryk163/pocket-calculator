@@ -6,6 +6,10 @@ button {
   align-items: center;
   align-content: center;
   color: black;
+  border-style: ridge;
+  border-color: black;
+  color: white;
+  background-color: black;
 }
 p{
   font-size: 30px;

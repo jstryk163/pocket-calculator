@@ -4,6 +4,16 @@ str += 7
 div.InnerHTML = str;
 }
 
+function numbernword(num) {
+  var div = document.getElementById("output")
+  output.value += num
+}
+
+
+
+
+
+
 function numEight() {
 var div = document.getElementById("output")
 str += 8
@@ -40,11 +50,11 @@ str += 6
 div.InnerHTML = str;
 }
 
-function divide() {
-var div = document.getElementById("output")
-str += /
-div.InnerHTML = str;
-}
+/// function divide() {
+/// var div = document.getElementById("output")
+//// str += /
+/// div.InnerHTML = str;
+/// }
 
 function numOne() {
 var div = document.getElementById("output")
@@ -66,7 +76,7 @@ div.InnerHTML = str;
 
 function subtract() {
 var div = document.getElementById("output")
-str += -
+//// str += -
 div.InnerHTML = str;
 }
 
@@ -78,18 +88,18 @@ div.InnerHTML = str;
 
 function decimal() {
 var div = document.getElementById("output")
-str += .
+///// str += .
 div.InnerHTML = str;
 }
 
 function equal() {
 var div = document.getElementById("output")
-str += =
+//// str += =
 div.InnerHTML = str;
 }
 
 function add() {
 var div = document.getElementById("output")
-str += +
+///// str += +
 div.InnerHTML = str;
 }
