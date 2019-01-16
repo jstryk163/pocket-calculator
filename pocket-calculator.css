@@ -1,12 +1,12 @@
 html{
-  background-color: blue;
+  background-color: grey;
 }
 
 button {
   align-items: center;
   align-content: center;
   color: black;
-  border-style: ridge;
+  border-style: solid;
   border-color: black;
   color: white;
   background-color: black;
