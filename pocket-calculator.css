@@ -3,6 +3,7 @@ html{
 }
 
 .numButton{
+  text-align: center;
   color: black;
   border-style: solid;
   border-color: black;
@@ -11,6 +12,7 @@ html{
   text-align: center;
 }
 .function{
+  text-align: center;
   color: black;
   border-style: solid;
   border-color: black;
