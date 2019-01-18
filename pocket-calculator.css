@@ -2,17 +2,30 @@ html{
   background-color: grey;
 }
 
-button {
-  align-items: center;
-  align-content: center;
+.numButton{
   color: black;
   border-style: solid;
   border-color: black;
   color: white;
   background-color: black;
+  text-align: center;
+}
+.function{
+  color: black;
+  border-style: solid;
+  border-color: black;
+  color: white;
+  background-color: black;
+  text-align: center;
 }
 p{
   font-size: 30px;
   color: white;
   text-align: center;
+}
+.mathbox{
+  border-style: solid;
+  border-color: black;
+  width:500px;
+  height: 175px;
 }

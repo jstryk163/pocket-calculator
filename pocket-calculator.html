@@ -11,27 +11,33 @@
   <body>
     <h1 class="PocketCalc"></h1>
     <div class="calc">
-      <h1 id="output"></h1>
-      <div class="numpad">
-        <p class="mathbox" id="output">Pocket Calculator</p>
-    <button class="number" value=7 onclick="numbernword('7');">7</button>
-    <button class="number" value=8 onclick="numbernword('8');">8</button>
-    <button class="number" value=9 onclick="numbernword('9');">9</button>
-    <button class="function" onclick="clearAll">AC</button>
-  </br>
-    <button class="number" value=4 onclick="numbernword('4');">4</button>
-    <button class="number" value=5 onclick="numbernword('5');">5</button>
-    <button class="number" value=6 onclick="numbernword('6');">6</button>
-    <button class="function" onclick="divide">/</button>
-  </br>
-    <button class="number" value=1 onclick="numbernword('1');">1</button>
-    <button class="number" value=2 onclick="numbernword('2');">2</button>
-    <button class="number" value=3 onclick="numbernword('3');">3</button>
-    <button class="function" onclick="subtract">-</button>
-  </br>
-    <button class="number" value=0 onclick="numbernword('3');">0</button>
-    <button class="function" onclick="decimal">.</button>
-    <button class="function" onclick="equal">=</button>
-    <button class="function" onclick="add">+</button>
+    <p>Pocket Calculator</p>
+    <p class="mathbox" id="output"></p>
+   <table>
+    <div>
+    <tr>
+      <th><button class="numButton" value=7 onclick="numbernword('7');">7</button></th>
+      <th><button class="numButton" value=8 onclick="numbernword('8');">8</button></th>
+      <th><button class="numButton" value=9 onclick="numbernword('9');">9</button></th>
+      <th><button class="function" onclick="clearAll">AC</button></th>
+    </tr>
+    <tr>
+      <th><button class="numButton" value=4 onclick="numbernword('4');">4</button></th>
+      <th><button class="numButton" value=5 onclick="numbernword('5');">5</button></th>
+      <th><button class="numButton" value=6 onclick="numbernword('6');">6</button></th>
+      <th><button class="function" onclick="divide">/</button></th>
+    </tr>
+    <tr>
+      <th><button class="numButton" value=1 onclick="numbernword('1');">1</button></th>
+      <th><button class="numButton" value=2 onclick="numbernword('2');">2</button></th>
+      <th><button class="numButton" value=3 onclick="numbernword('3');">3</button></th>
+      <th><button class="function" onclick="subtract">-</button></th>
+    </tr>
+    <tr>
+      <th><button class="numButton" value=0 onclick="numbernword('0');">0</button></th>
+      <th><button class="function" onclick="decimal">.</button></th>
+      <th><button class="function" onclick="equal">=</button></th>
+      <th><button class="function" onclick="add">+</button></th>
+    </tr>
   </body>
 </html
