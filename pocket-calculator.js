@@ -1,105 +1,171 @@
-function numSeven() {
-var div = document.getElementById("output")
-str += 7
-div.InnerHTML = str;
-}
-
-function numbernword(num) {
-  var div = document.getElementById("output")
-  output.value += num
-}
+var string = "";
+var operation = 0;
+var decimalPoint = false;
+var symbol = false;
+var error = false;
+var number = ""
 
 
-
-
-
-
-function numEight() {
-var div = document.getElementById("output")
-str += 8
-div.InnerHTML = str;
-}
-
-function numnNine() {
-var div = document.getElementById("output")
-str += 9
-div.InnerHTML = str;
-}
 
 function clearAll() {
-var div = document.getElementById("output")
-str += ""
-div.InnerHTML = str;
+  string = "";
+  operation = 0;
+  document.getElementById("display").innerHTML = "0"
+  decimalPoint = false;
+  symbol = false;
+  error = false;
+  number = ""
+
 }
 
-function numFour() {
-var div = document.getElementById("output")
-str += 4
-div.InnerHTML = str;
+function num(num) {
+
+  if (error == false) {
+    let testNumber = number.toString().length
+    if (testNumber < 9)
+    number += num
+    document.getElementById("display").innerHTML = Number(number).toLocaleString();
+    }
+
 }
 
-function numFive() {
-var div = document.getElementById("output")
-str += 5
-div.InnerHTML = str;
+
+function decimal(dec) {
+
+  if (error == false) {
+
+  if (decimalPoint == false) {
+    if (number == "") {
+      number = 0
+    }
+     number += '.';
+     document.getElementById('display').innerHTML = Number(number).toLocaleString() + ".";
+     decimalPoint = true;
+}
+  else {
+    return;
+  }
+
+}
 }
 
-function numSix() {
-var div = document.getElementById("output")
-str += 6
-div.InnerHTML = str;
+
+function setFunc(command) {
+
+if (error == false) {
+
+if (command == 0) {
+  return;
+  }
+
+  if (command == "add") {
+  if (number == "") {
+    number = 0
+  }
+  string += number + "+";
+  symbol = true
+  decimalPoint = false
+  number = ""
+  document.getElementById("display").innerHTML = "+"
+  }
+else if (command == "subtract") {
+  if (symbol == false) {
+    string = string.slice(0,string.length - 1)
+  }
+  if (number == "") {
+    number = 0
+  }
+  string += number + "-";
+  symbol = true
+  decimalPoint = false
+  number = ""
+  document.getElementById("display").innerHTML = "-"
+  }
+else if (command == "multiply") {
+  if (symbol == false) {
+    string = string.slice(0,string.length - 1)
+  }
+  if (number == "") {
+    number = 0
+  }
+  string += number + "*";
+  symbol = true
+  decimalPoint = false
+  number = ""
+  document.getElementById("display").innerHTML = "x"
+  }
+else if (command == "divide") {
+  if (symbol == false) {
+    string = string.slice(0,string.length - 1)
+  }
+  if (number == "") {
+    number = 0
+  }
+  string += number + "/";
+  symbol = true
+  decimalPoint = false
+  number = ""
+  document.getElementById("display").innerHTML = "/"
+  }
+else if (command == "percentage") {
+  if (symbol == false) {
+    string = string.slice(0,string.length - 1)
+  }
+  if (number == "") {
+    number = 0
+  }
+  string += number + "/100"
+  number = ""
+  decimalPoint = false
+  document.getElementById("display").innerHTML = "%"
+}
+else if (command == "signchange") {
+  if (symbol == false) {
+    string = string.slice(0,string.length - 1)
+  }
+  if (number == "") {
+    number = 0
+  }
+  string += number + "*-1"
+  number = ""
+  decimalPoint = false
+  document.getElementById("display").innerHTML = "±"
 }
 
-/// function divide() {
-/// var div = document.getElementById("output")
-//// str += /
-/// div.InnerHTML = str;
-/// }
-
-function numOne() {
-var div = document.getElementById("output")
-str += 1
-div.InnerHTML = str;
+}
 }
 
-function numTwo() {
-var div = document.getElementById("output")
-str += 2
-div.InnerHTML = str;
+
+
+function answer() {
+  if (number == '0') {
+    string += "0"
+  }
+  else {
+    string += number
+  }
+  if (error == false) {
+
+  let finalCalculation = eval(string)
+  if (finalCalculation == Infinity) {
+    document.getElementById("display").innerHTML = "Error"
+    error = true
+  }
+  else if (finalCalculation >= 1000000000) {
+    let exponent = finalCalculation.toString().length-1;
+    document.getElementById('display').innerHTML = finalCalculation / (10 ** (exponent)) + 'e' + exponent;;
+    }
+    else {
+      document.getElementById('display').innerHTML = finalCalculation.toLocaleString();
+  }
+  number = finalCalculation
 }
 
-function numThree() {
-var div = document.getElementById("output")
-str += 3
-div.InnerHTML = str;
-}
 
-function subtract() {
-var div = document.getElementById("output")
-//// str += -
-div.InnerHTML = str;
-}
 
-function zero(){
-var div = document.getElementById("output")
-str += 0
-div.InnerHTML = str;
-}
+operation = 0;
+queuedOperation = 0;
+displayNum = "";
+storedNum = "";
 
-function decimal() {
-var div = document.getElementById("output")
-///// str += .
-div.InnerHTML = str;
-}
-
-function equal() {
-var div = document.getElementById("output")
-//// str += =
-div.InnerHTML = str;
-}
-
-function add() {
-var div = document.getElementById("output")
-///// str += +
-div.InnerHTML = str;
 }
